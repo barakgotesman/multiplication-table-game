@@ -1,0 +1,24 @@
+
+
+<div class="progress">
+    <div class="progress-bar" role="progressbar" style="width: {{level}}%" ></div>
+</div>
+<br>
+
+<button type="button" class="btn btn-secondary float-end w-100" (click)="hint=true" *ngIf="hint==false">רמז</button>
+
+
+
+<h2 dir="ltr">{{firstNum}} X {{secondNum}} = ?</h2>
+<button dir=ltr
+  type="button"
+  class="btn btn-outline-primary btn-lg p-4 m-2"
+  *ngFor="let o of this.options;" (click)="answer(o)"
+>{{o}}</button>
+<br>
+
+<div *ngIf="hint==true">
+  <button type="button" class="btn btn-link" (click)="hint=false">הסתר רמז</button><br>
+  <img src="https://i.ibb.co/jWbjFkz/Screenshot-1.png" class="img-fluid">
+</div>
+
